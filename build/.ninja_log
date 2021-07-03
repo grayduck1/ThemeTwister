@@ -1,0 +1,22 @@
+# ninja log v5
+1	1338	1625332295772392434	themetwister.p/src/Application.c	9e615540b09b0b9a
+1	1338	1625332295772392434	themetwister.p/src/Page/Welcome.c	9e615540b09b0b9a
+1	1338	1625332295772392434	themetwister.p/src/Page/TwisterOS.c	9e615540b09b0b9a
+1	1338	1625332295772392434	themetwister.p/src/Page/Twister95.c	9e615540b09b0b9a
+1	1338	1625332295772392434	themetwister.p/src/Page/TwisterXP.c	9e615540b09b0b9a
+1	1338	1625332295772392434	themetwister.p/src/Page/Twister7.c	9e615540b09b0b9a
+1	1338	1625332295772392434	themetwister.p/src/Page/Twister10.c	9e615540b09b0b9a
+1	1338	1625332295772392434	themetwister.p/src/Page/Twister11.c	9e615540b09b0b9a
+1	1338	1625332295772392434	themetwister.p/src/Page/iTwister.c	9e615540b09b0b9a
+1	1338	1625332295772392434	themetwister.p/src/Page/iTwisterSur.c	9e615540b09b0b9a
+1341	3409	1625332297800368656	themetwister.p/meson-generated_src_Page_Twister95.c.o	110a8af4ce98310b
+1347	3785	1625332298204363927	themetwister.p/meson-generated_src_Page_TwisterXP.c.o	826055c9b0e50dc8
+1339	3914	1625332298344362289	themetwister.p/meson-generated_src_Application.c.o	8fc96745c6eed00
+1339	3934	1625332298332362430	themetwister.p/meson-generated_src_Page_Welcome.c.o	1db992812173ecd3
+1340	4116	1625332298552359856	themetwister.p/meson-generated_src_Page_TwisterOS.c.o	9f89e381f48c9a01
+1359	4119	1625332298532360090	themetwister.p/meson-generated_src_Page_Twister7.c.o	55d1925d55a73118
+3785	5217	1625332299652346999	themetwister.p/meson-generated_src_Page_Twister11.c.o	3725a14ad2a85761
+3934	5496	1625332299928343775	themetwister.p/meson-generated_src_Page_iTwisterSur.c.o	e3a7829ba4418e5e
+3915	5571	1625332300000342934	themetwister.p/meson-generated_src_Page_iTwister.c.o	4d86597101a5af2b
+3435	5623	1625332300060342234	themetwister.p/meson-generated_src_Page_Twister10.c.o	89b48ffdb7408263
+5624	6216	1625332300656335281	themetwister	8b68b2e85167eef7

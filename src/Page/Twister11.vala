@@ -22,12 +22,12 @@
 using Gtk;
 
 namespace ThemeTwister {
-    public class TwisterXP : Gtk.Box {
-        public TwisterXP () {
+    public class Twister11 : Gtk.Box {
+        public Twister11 () {
             var wrapper = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
             wrapper.get_style_context ().add_class ("theme");
 
-	        var pixbuf = new Gdk.Pixbuf.from_file("/usr/local/share/themetwister/RaspbianXP.png");
+	        var pixbuf = new Gdk.Pixbuf.from_file("/usr/local/share/themetwister/Twister11.png");
 	        pixbuf = pixbuf.scale_simple(200, 112, Gdk.InterpType.BILINEAR);
 
 			var image = new Gtk.Image();
@@ -37,13 +37,24 @@ namespace ThemeTwister {
 			wrapper.add(image);
 
             var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            button_box.get_style_context ().add_class ("themetwister_box");   
+            button_box.get_style_context ().add_class ("themetwister_box");
 
-			var button = new Gtk.Button.with_label ("Twister XP");
-			button.get_style_context().add_class ("themetwister_button_large");
+			var button = new Gtk.Button.with_label ("Light");
+			button.get_style_context().add_class ("themetwister_button");
 			button.clicked.connect (() => {
 		        try {
-		        	GLib.AppInfo info = AppInfo.create_from_commandline("xfce4-terminal --title=Config --hide-menubar --hide-borders --hide-scrollbar -e \"/usr/share/ThemeSwitcher/ThemeTwister RaspbianXP\"", null, AppInfoCreateFlags.SUPPORTS_STARTUP_NOTIFICATION);
+		        	GLib.AppInfo info = AppInfo.create_from_commandline("xfce4-terminal --title=Config --hide-menubar --hide-borders --hide-scrollbar -e \"/usr/share/ThemeSwitcher/ThemeTwister Twister11\"", null, AppInfoCreateFlags.SUPPORTS_STARTUP_NOTIFICATION);
+		        	info.launch(null,Gdk.Display.get_default().get_app_launch_context());
+		        } catch (GLib.Error e){warning ("Could not load Config: %s", e.message);}
+			});
+
+			button_box.add(button);
+
+			button = new Gtk.Button.with_label ("Dark");
+			button.get_style_context().add_class ("themetwister_button");
+			button.clicked.connect (() => {
+		        try {
+		        	GLib.AppInfo info = AppInfo.create_from_commandline("xfce4-terminal --title=Config --hide-menubar --hide-borders --hide-scrollbar -e \"/usr/share/ThemeSwitcher/ThemeTwister Twister11-Dark\"", null, AppInfoCreateFlags.SUPPORTS_STARTUP_NOTIFICATION);
 		        	info.launch(null,Gdk.Display.get_default().get_app_launch_context());
 		        } catch (GLib.Error e){warning ("Could not load Config: %s", e.message);}
 			});
@@ -51,6 +62,15 @@ namespace ThemeTwister {
 			button_box.add(button);
 
 			wrapper.add(button_box);
+
+	        var description = new Label ("Twister 11");
+			description.set_line_wrap_mode(Pango.WrapMode.WORD);
+			description.set_line_wrap(true);
+			description.set_lines(1);
+			description.set_justify(Justification.CENTER);
+			description.get_style_context ().add_class("themetwister_description_label");			
+
+			wrapper.add(description);
        
             this.add(wrapper);
         }

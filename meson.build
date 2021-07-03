@@ -46,6 +46,7 @@ executable(
     'src/Page/TwisterXP.vala',
     'src/Page/Twister7.vala',
     'src/Page/Twister10.vala',
+    'src/Page/Twister11.vala',
     'src/Page/iTwister.vala',
     'src/Page/iTwisterSur.vala',
     dependencies: [
@@ -99,5 +100,9 @@ install_data(
 )
 install_data(
     join_paths('data', 'TwisterOS.png'),
+    install_dir: join_paths(datadir, PROJECT_NAME)
+)
+install_data(
+    join_paths('data', 'Twister11.png'),
     install_dir: join_paths(datadir, PROJECT_NAME)
 )

@@ -112,6 +112,7 @@ public class ThemeTwisterWindow : Window {
         box2.get_style_context ().add_class ("themetwister_main_box2");
 
         box2.add(new ThemeTwister.Twister10());
+        box2.add(new ThemeTwister.Twister11());
         box2.add(new ThemeTwister.iTwister());
        	box2.add(new ThemeTwister.iTwisterSur());
 
@@ -138,6 +139,8 @@ static int main (string[] args) {
     File nighthawk = File.new_for_path (GLib.Environment.get_variable ("HOME") + "/.nighthawk.twid");
 
     File twisteros = File.new_for_path (GLib.Environment.get_variable ("HOME") + "/.twisteros-dark.twid");
+    File twister11 = File.new_for_path (GLib.Environment.get_variable ("HOME") + "/.twister11-dark.twid");
+
     File iraspbiansur = File.new_for_path (GLib.Environment.get_variable ("HOME") + "/.iraspbiansur-dark.twid");    
 
     string css_file = Config.PACKAGE_SHAREDIR +
