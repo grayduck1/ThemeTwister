@@ -145,7 +145,7 @@ static int main (string[] args) {
 
     string css_file = Config.PACKAGE_SHAREDIR +
         "/" + Config.PROJECT_NAME +
-        "/" + (iraspbian.query_exists() || nighthawk.query_exists() || twisteros.query_exists() twister11.query_exists() || iraspbiansur.query_exists() ? "themetwister_dark.css" : "themetwister.css");
+        "/" + (iraspbian.query_exists() || nighthawk.query_exists() || twisteros.query_exists() || twister11.query_exists() || iraspbiansur.query_exists() ? "themetwister_dark.css" : "themetwister.css");
     var css_provider = new Gtk.CssProvider ();
 
     try {
