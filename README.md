@@ -1,5 +1,5 @@
 # ThemeTwister
-ThemeTwister GUI for TwisterOS.
+ThemeTwister GUI for Twister OS.
 
 ![Spotlight Screenshot](ThemeTwisterMockup.png?raw=true)
 
