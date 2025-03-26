@@ -49,6 +49,7 @@ executable(
     'src/Page/Twister11.vala',
     'src/Page/iTwister.vala',
     'src/Page/iTwisterSur.vala',
+    'src/Page/TwisterPlasma.vala',
     dependencies: [
         dependency('gtk+-3.0', version: '>=3.22'),
         dependency('cairo', version: '>=1.15.0'),
@@ -104,5 +105,9 @@ install_data(
 )
 install_data(
     join_paths('data', 'Twister11.png'),
+    install_dir: join_paths(datadir, PROJECT_NAME)
+)
+install_data(
+    join_paths('data', 'TwisterPlasma.png'),
     install_dir: join_paths(datadir, PROJECT_NAME)
 )
