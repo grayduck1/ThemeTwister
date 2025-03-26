@@ -39,7 +39,7 @@ public class ThemeTwisterWindow : Window {
         this.resizable = false;
         this.window_position = Gtk.WindowPosition.CENTER;
 
-        this.set_default_size (800, 400);
+        this.set_default_size (800, 600);
 
 
         var grid = new Grid();
@@ -118,6 +118,13 @@ public class ThemeTwisterWindow : Window {
 
         main_box.add(box2);
 
+		var box3 = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        box3.get_style_context ().add_class ("themetwister_main_box3");
+
+        box3.add(new ThemeTwister.TwisterPlasma());
+
+        main_box.add(box3);
+
         stack.add_named(main_box, "2");
 
 		this.show_all();
@@ -141,11 +148,12 @@ static int main (string[] args) {
     File twisteros = File.new_for_path (GLib.Environment.get_variable ("HOME") + "/.twisteros-dark.twid");
     File twister11 = File.new_for_path (GLib.Environment.get_variable ("HOME") + "/.twister11-dark.twid");
 
-    File iraspbiansur = File.new_for_path (GLib.Environment.get_variable ("HOME") + "/.iraspbiansur-dark.twid");    
+    File iraspbiansur = File.new_for_path (GLib.Environment.get_variable ("HOME") + "/.iraspbiansur-dark.twid");
+    File twisterplasma = File.new_for_path (GLib.Environment.get_variable ("HOME") + "/.twisterplasma-dark.twid");
 
     string css_file = Config.PACKAGE_SHAREDIR +
         "/" + Config.PROJECT_NAME +
-        "/" + (iraspbian.query_exists() || nighthawk.query_exists() || twisteros.query_exists() || twister11.query_exists() || iraspbiansur.query_exists() ? "themetwister_dark.css" : "themetwister.css");
+        "/" + (iraspbian.query_exists() || nighthawk.query_exists() || twisteros.query_exists() || twister11.query_exists() || iraspbiansur.query_exists() || twisterplasma.query_exists() ? "themetwister_dark.css" : "themetwister.css");
     var css_provider = new Gtk.CssProvider ();
 
     try {
