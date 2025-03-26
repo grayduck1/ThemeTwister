@@ -23,33 +23,45 @@ using Gtk;
 
 namespace ThemeTwister {
     public class Welcome : Gtk.Box {
-        public Welcome () {
-            var wrapper = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-            wrapper.get_style_context ().add_class ("themetwister");        	
+        public Welcome() {
+            var vbox = new Gtk.Box(Gtk.Orientation.VERTICAL, 0); // Use a VBox for vertical layout
+            vbox.get_style_context().add_class("themetwister");
 
-	        // logo
-	        var logo = new Gtk.Image.from_icon_name("twisteros", IconSize.DIALOG);
-			logo.get_style_context().add_class ("themetwister_logo");
+            var spacer_top = new Label("");
+            spacer_top.set_vexpand(true);
+            vbox.pack_start(spacer_top, true, true, 0); // Top spacer
 
-			wrapper.add(logo);
+            var wrapper = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
 
-			var welcome_label = new Label("Change Your Theme");
-			welcome_label.set_property("can-focus", false);
-			
-			welcome_label.get_style_context ().add_class("themetwister_label");
+            // logo
+            var logo = new Gtk.Image.from_icon_name("twisteros", IconSize.DIALOG);
+            logo.get_style_context().add_class("themetwister_logo");
 
-			wrapper.add(welcome_label);
+            wrapper.add(logo);
 
-	        var welcome_description = new Label ("Want a different look? This will change your current theme.");
-			welcome_description.set_line_wrap_mode(Pango.WrapMode.WORD);
-			welcome_description.set_line_wrap(true);
-			welcome_description.set_lines(2);
-			welcome_description.set_justify(Justification.CENTER);
-			welcome_description.get_style_context ().add_class("themetwister_description");
+            var welcome_label = new Label("Change Your Theme");
+            welcome_label.set_property("can-focus", false);
 
-			wrapper.add(welcome_description);
-       
-            this.add(wrapper);
+            welcome_label.get_style_context().add_class("themetwister_label");
+
+            wrapper.add(welcome_label);
+
+            var welcome_description = new Label("Want a different look? This will change your current theme.");
+            welcome_description.set_line_wrap_mode(Pango.WrapMode.WORD);
+            welcome_description.set_line_wrap(true);
+            welcome_description.set_lines(2);
+            welcome_description.set_justify(Justification.CENTER);
+            welcome_description.get_style_context().add_class("themetwister_description");
+
+            wrapper.add(welcome_description);
+
+            vbox.pack_start(wrapper, false, false, 0); // Add the wrapper to the center of the VBox.
+
+            var spacer_bottom = new Label("");
+            spacer_bottom.set_vexpand(true);
+            vbox.pack_start(spacer_bottom, true, true, 0); // Bottom spacer
+
+            this.add(vbox); // Add the VBox to the Welcome Box.
         }
     }
 }
