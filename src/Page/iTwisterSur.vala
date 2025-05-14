@@ -63,7 +63,7 @@ namespace ThemeTwister {
 
 			wrapper.add(button_box);
 
-	        var description = new Label ("iTwister Sur");
+	        var description = new Label ("iTwister XV");
 			description.set_line_wrap_mode(Pango.WrapMode.WORD);
 			description.set_line_wrap(true);
 			description.set_lines(1);
